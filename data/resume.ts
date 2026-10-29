@@ -22,7 +22,7 @@ export type SkillGroup = { category: string; items: string[] };
 export type Testimonial = { quote: string; name: string; title: string };
 
 export const site = {
-  url: "https://REPLACE_your-domain.vercel.app",
+  url: "https://portfolio-akilesh.vercel.app",
   title: "Akilesh K R | Full-Stack & GenAI Engineer",
   description:
     "Mechanical engineer turned software developer. I build full-stack web apps and LLM agents that turn real factory data into answers.",
