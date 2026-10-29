@@ -21,7 +21,11 @@ export default function Projects() {
     >
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((p, i) => (
-          <Reveal key={p.slug} delay={i * 0.08} className={cn(i === 0 && "md:col-span-2")}>
+          <Reveal
+            key={p.slug}
+            delay={i * 0.08}
+            className={cn((i === 0 || (projects.length % 2 === 0 && i === projects.length - 1)) && "md:col-span-2")}
+      >
             <article className="card group flex h-full flex-col p-6 transition duration-300 hover:-translate-y-1 hover:border-accent/60 hover:shadow-lift sm:p-8">
               <div className="flex items-start justify-between gap-4">
                 <span className="font-mono text-step--1 text-muted">{String(i + 1).padStart(2, "0")}</span>

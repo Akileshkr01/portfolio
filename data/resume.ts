@@ -61,7 +61,7 @@ export const about = {
 export const metrics: Metric[] = [
   { label: "CGPA", value: 9.58, decimals: 2, suffix: "/10", note: "B.E. Mechanical Engineering" },
   { label: "Production records", value: 10966, note: "analysed in Factory Line Copilot" },
-  { label: "Full-stack projects", value: 3, note: "built and on GitHub" },
+  { label: "Projects built", value: 4, note: "full-stack and AI, on GitHub" },
   { label: "Hackathon win", value: 1, note: "Smart India Hackathon (intra-college)" },
 ];
 
@@ -96,6 +96,24 @@ export const projects: Project[] = [
     ],
     outcome: "Plain-English answers over 10,966 production records, running fully locally with read-only database access.",
     github: "REPLACE_https://github.com/Akileshkr01/Factory-line-copilot",
+  },
+    {
+    slug: "refundradar",
+    title: "RefundRadar",
+    tagline: "AI customer-support triage that drafts replies and keeps a human in the loop.",
+    problem:
+      "Support teams spend time sorting incoming messages by intent and urgency, and AI-drafted replies still need human oversight before they go out.",
+    role: "AI automation developer",
+    stack: ["n8n", "Python", "FastAPI", "Gemini API", "Telegram Bot", "pytest", "Google Sheets"],
+    highlights: [
+      "Built an n8n workflow that receives customer messages through a webhook and uses the Gemini API to detect intent and urgency, then drafts a reply.",
+      "Added retries and a manual-review path for unclear AI results, so uncertain cases reach a person instead of being sent automatically.",
+      "Built a basic FastAPI refund-risk service covered by pytest tests.",
+      "Routed approvals through a Telegram bot and logged them to Google Sheets.",
+    ],
+    outcome:
+      "An end-to-end triage pipeline from incoming message to human-approved reply, with every approval logged to Google Sheets.",
+    github: "https://github.com/Akileshkr01/RefundRadar-AI-Customer-Support-Message-Triage",
   },
   {
     slug: "the-bookmark",
@@ -137,7 +155,7 @@ export const skillGroups: SkillGroup[] = [
   { category: "Languages", items: ["Java", "Python", "JavaScript"] },
   { category: "Web", items: ["React.js", "Node.js", "Express.js", "REST APIs"] },
   { category: "Databases", items: ["MySQL", "MongoDB"] },
-  { category: "GenAI / LLM", items: ["LangChain", "LangGraph", "RAG"] },
+  { category: "GenAI / LLM", items: ["LangChain", "LangGraph", "RAG", "n8n"] },
   { category: "Cloud & Tools", items: ["Azure", "Docker", "Git", "GitHub"] },
   { category: "CS Fundamentals", items: ["Operating Systems", "Computer Networks", "DBMS"] },
 ];
